@@ -782,6 +782,7 @@ bool ContractCompiler::visit(InlineAssembly const& _inlineAssembly)
 				else if (m_context.isLocalVariable(decl))
 				{
 					unsigned stackDiff = static_cast<unsigned>(_assembly.stackHeight()) - m_context.baseStackOffsetOfVariable(*variable);
+					bool leftShiftSelector = false;
 					if (!ref->second.suffix.empty())
 					{
 						string const& suffix = ref->second.suffix;
@@ -818,6 +819,19 @@ bool ContractCompiler::visit(InlineAssembly const& _inlineAssembly)
 							if (suffix == "length")
 								stackDiff--;
 						}
+						else if (
+							auto const* functionType = dynamic_cast<FunctionType const*>(variable->type());
+							functionType && functionType->kind() == FunctionType::Kind::External
+						)
+						{
+							solAssert(suffix == "selector" || suffix == "address", "");
+							solAssert(variable->type()->sizeOnStack() == 2, "");
+							if (suffix == "selector")
+							{
+								stackDiff--;
+								leftShiftSelector = true;
+							}
+						}
 						else
 							solAssert(false, "");
 					}
@@ -830,6 +844,9 @@ bool ContractCompiler::visit(InlineAssembly const& _inlineAssembly)
 							errinfo_comment("Stack too deep, try removing local variables.")
 						);
 					_assembly.appendInstruction(dupInstruction(stackDiff));
+					if (leftShiftSelector)
+						/// need to store it as bytes4
+						CompilerUtils(m_context).leftShiftNumberOnStack(224);
 				}
 				else
 					solAssert(false, "");

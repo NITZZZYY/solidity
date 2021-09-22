@@ -2,6 +2,7 @@
 
 Language Features:
  * Inheritance: A function that overrides only a single interface function does not require the ``override`` specifier.
+ * Inline Assembly: Use ``.address`` and ``.selector`` on external function pointers to access their address and function selector.
  * Type System: Support ``type().min`` and ``type().max`` for enums.
  * User Defined Value Type: allows creating a zero cost abstraction over a value type with stricter type requirements.
 

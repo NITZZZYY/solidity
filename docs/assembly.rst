@@ -136,6 +136,11 @@ evaluate to the address of the variable in calldata, not the value itself.
 The variable can also be assigned a new offset, but note that no validation to ensure that
 the variable will not point beyond ``calldatasize()`` is performed.
 
+For external function pointers the address and the function selector can be
+accessed using ``x.address`` and ``x.selector``.
+The selector will be left aligned and of type ``uint32``.
+Assigning is not possible.
+
 For dynamic calldata arrays, you can access
 their calldata offset (in bytes) and length (number of elements) using ``x.offset`` and ``x.length``.
 Both expressions can also be assigned to, but as for the static case, no validation will be performed
