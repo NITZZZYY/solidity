@@ -13,7 +13,7 @@ if ( -not (Test-Path "$PSScriptRoot\..\deps\boost") ) {
   # FIXME: The default user agent results in Artifactory treating Invoke-WebRequest as a browser
   # and serving it a page that requires JavaScript.
   Invoke-WebRequest -URI "https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.zip" -OutFile boost.zip -UserAgent ""
-  if (-not (Get-FileHash boost.zip).Hash -eq "15dc0502666851226f1d9c0fe352ccaf0ffdeff2350b6d2d08a90fcd1f610a10"))
+  if ((Get-FileHash boost.zip).Hash -ne "d2886ceff60c35fc6dc9120e8faa960c1e9535f2d7ce447469eae9836110ea77") {
     throw 'Downloaded Boost source package has wrong checksum.'
   }
   tar -xf boost.zip
