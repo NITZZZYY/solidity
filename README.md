@@ -1,5 +1,7 @@
 # The Solidity Contract-Oriented Programming Language
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 [![Matrix Chat](https://img.shields.io/badge/Matrix%20-chat-brightgreen?style=plastic&logo=matrix)](https://matrix.to/#/#ethereum_solidity:gitter.im)
 [![Gitter Chat](https://img.shields.io/badge/Gitter%20-chat-brightgreen?style=plastic&logo=gitter)](https://gitter.im/ethereum/solidity)
 [![Solidity Forum](https://img.shields.io/badge/Solidity_Forum%20-discuss-brightgreen?style=plastic&logo=discourse)](https://forum.soliditylang.org/)
@@ -12,6 +14,8 @@ Solidity is a statically typed, contract-oriented, high-level language for imple
 
 For a good overview and starting point, please check out the official [Solidity Language Portal](https://soliditylang.org).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Table of Contents
 
 - [Background](#background)
@@ -22,6 +26,8 @@ For a good overview and starting point, please check out the official [Solidity 
 - [Maintainers](#maintainers)
 - [License](#license)
 - [Security](#security)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Background
 
@@ -35,10 +41,14 @@ Solidity. This is because breaking changes, as well as new features and bug fixe
 introduced regularly. We currently use a 0.x version
 number [to indicate this fast pace of change](https://semver.org/#spec-item-4).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Build and Install
 
 Instructions about how to build and install the Solidity compiler can be
 found in the [Solidity documentation](https://docs.soliditylang.org/en/latest/installing-solidity.html#building-from-source).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 ## Example
@@ -47,7 +57,7 @@ A "Hello World" program in Solidity is of even less use than in other languages,
 
 ```solidity
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.6.0 <0.9.0;
+pragma solidity ^0.6.0 <=0.9.0;
 
 contract HelloWorld {
     function helloWorld() external pure returns (string memory) {
@@ -55,6 +65,9 @@ contract HelloWorld {
     }
 }
 ```
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+> Getting started with soliditu:
 
 To get started with Solidity, you can use [Remix](https://remix.ethereum.org/), which is a
 browser-based IDE. Here are some example contracts:
@@ -64,9 +77,13 @@ browser-based IDE. Here are some example contracts:
 3. [Safe remote purchase](https://docs.soliditylang.org/en/latest/solidity-by-example.html#safe-remote-purchase)
 4. [Micropayment Channel](https://docs.soliditylang.org/en/latest/solidity-by-example.html#micropayment-channel)
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Documentation
 
 The Solidity documentation is hosted at [Read the docs](https://docs.soliditylang.org).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Development
 
@@ -78,15 +95,23 @@ if you want to help.
 You can find our current feature and bug priorities for forthcoming
 releases in the [projects section](https://github.com/ethereum/solidity/projects).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Maintainers
 * [@axic](https://github.com/axic)
 * [@chriseth](https://github.com/chriseth)
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## License
 Solidity is licensed under [GNU General Public License v3.0](LICENSE.txt).
 
 Some third-party code has its [own licensing terms](cmake/templates/license.h.in).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Security
 
 The security policy may be [found here](SECURITY.md).
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
