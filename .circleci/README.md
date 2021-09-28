@@ -37,3 +37,5 @@ docker run -v `pwd`:/src/solidity -ti ethereum/solidity-buildpack-deps:ubuntu200
 cd /src/solidity
 <commands_to_test_build_with_new_docker_image>
 ```
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
