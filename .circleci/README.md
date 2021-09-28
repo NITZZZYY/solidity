@@ -1,5 +1,7 @@
 ## CircleCI integration
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ### Docker images
 
 The docker images are build locally on the developer machine:
