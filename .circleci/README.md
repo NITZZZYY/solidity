@@ -25,7 +25,10 @@ Once the docker image has been built and pushed to Dockerhub, you can find it at
 
 where the image tag reflects the target OS and revision to build Solidity and run its tests on.
 
-### Testing docker images locally
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+>Testing docker images locally
+
 
 ```sh
 cd solidity
