@@ -1,6 +1,6 @@
 $ErrorActionPreference = "Stop"
 
-cd "$PSScriptRoot\.."
+cd "$PSScriptRoot\.." 
 
 if ("$Env:FORCE_RELEASE" -Or "$Env:CIRCLE_TAG") {
 	New-Item prerelease.txt -type file
