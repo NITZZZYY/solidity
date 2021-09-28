@@ -1,8 +1,8 @@
 ## CircleCI integration
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-### Docker images
+>Docker images
 
 The docker images are build locally on the developer machine:
 
@@ -13,7 +13,11 @@ docker build -t ethereum/solidity-buildpack-deps:ubuntu2004-<revision> -f Docker
 docker push ethereum/solidity-buildpack-deps:ubuntu2004-<revision>
 ```
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 The current revisions per docker image are stored in [circle ci pipeline parameters](https://github.com/CircleCI-Public/api-preview-docs/blob/master/docs/pipeline-parameters.md#pipeline-parameters) called `<image-desc>-docker-image-rev` (e.g., `ubuntu-2004-docker-image-rev`). Please update the value assigned to the parameter(s) corresponding to the docker image(s) being updated at the time of the update. Please verify that the value assigned to the parameter matches the revision part of the docker image tag (`<revision>` in the docker build/push snippet shown above). Otherwise, the docker image used by circle ci and the one actually pushed to docker hub will differ.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 Once the docker image has been built and pushed to Dockerhub, you can find it at:
 
