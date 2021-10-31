@@ -31,6 +31,8 @@ For a good overview and starting point, please check out the official [Solidity 
 - [License](#license)
 - [Security](#security)
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Background
 
 Solidity is a statically-typed curly-braces programming language designed for developing smart contracts
