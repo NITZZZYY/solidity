@@ -50,6 +50,7 @@ number [to indicate this fast pace of change](https://semver.org/#spec-item-4).
 Instructions about how to build and install the Solidity compiler can be
 found in the [Solidity documentation](https://docs.soliditylang.org/en/latest/installing-solidity.html#building-from-source).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## Example
 
@@ -65,6 +66,8 @@ contract HelloWorld {
     }
 }
 ```
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To get started with Solidity, you can use [Remix](https://remix.ethereum.org/), which is a
 browser-based IDE. Here are some example contracts:
