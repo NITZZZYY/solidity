@@ -18,6 +18,8 @@ Solidity is a statically typed, contract-oriented, high-level language for imple
 
 For a good overview and starting point, please check out the official [Solidity Language Portal](https://soliditylang.org).
 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 ## Table of Contents
 
 - [Background](#background)
