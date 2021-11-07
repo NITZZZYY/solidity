@@ -2,7 +2,7 @@
 
 > What is Solidity:
 
-- Solidity is an object-oriented programming language for writing smart contracts. It is used for implementing smart contracts on various blockchain platforms, most notably Ethereum.
+- Solidity is an object-oriented programming language for writing smart contracts. It is used for implementing smart contracts on various blockchain platforms, most notably Ethereum. 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
